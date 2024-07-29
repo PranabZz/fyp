@@ -1,0 +1,63 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> Browse Captions </title>
+    <link rel="stylesheet" href="{% static 'browse-style.css' %}">
+    <link href="https://fonts.googleapis.com/css?family=Georgia" rel="stylesheet">
+  </head>
+  <body>
+    <div class="container">
+      <div class="sidebar">
+        <ul>
+          <li class="logo">
+            <img class="logo-image" src="{% static 'Logo/logo-04.png' %}" alt="Logo">
+          </li>
+          {% if user.is_authenticated %}
+          <li class="welcome">Welcome, {{ user.first_name }}!</li>
+          {% else %}
+          <li class="welcome">Welcome, guest!</li>
+          {% endif %}
+          <li><a href="/">Home</a></li>
+          <li><a href="/authentication/register/">Register</a></li>
+          <li><a href="/authentication/login/">Log in</a></li>
+          <li><a href="/browse_captions">Browse captions</a></li>
+          {% if user.is_authenticated %}
+          <li><a href="/authentication/logout/">Log out</a></li>
+          {% endif %}
+        </ul>
+      </div>
+      <div class="content">
+        <h1>Browse Captions</h1>
+        <div class="sort">
+          <a href="?sort=likes">Sort by Likes</a>
+          <a href="?sort=created">Sort by Created Date</a>
+        </div>
+        <div class="card-container">
+          {% for image in images %}
+          <div class="card">
+            <img src="{{ image.image.url }}" alt="{{ image.caption }}" class="card-img">
+            <div class="card-body">
+              <h2 class="card-title">{{ image.caption }}</h2>
+              <p class="card-text">Likes: {{ image.count_likes }}</p>
+              {% if request.user.is_authenticated %}
+              <form method="POST" action="{% url 'myapp:like_image' image.id %}">
+                {% csrf_token %}
+                {% if request.user in image.likes.all %}
+                <button type="submit" name="action" value="unlike" class="btn-like"><i class="fas fa-heart"></i> Unlike</button>
+                {% else %}
+                <button type="submit" name="action" value="like" class="btn-like"><i class="far fa-heart"></i> Like</button>
+                {% endif %}
+              </form>
+              {% endif %}
+            </div>
+          </div>
+          {% empty %}
+          <p>No captions available.</p>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

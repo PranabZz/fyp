@@ -1,0 +1,302 @@
+/* General styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f2f2f2;
+  font-family: "Georgia", serif;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px;
+}
+
+/* Header styles */
+.header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.logo-title {
+  width: 80px;
+  height: 80px;
+  margin-left: -20px;
+  margin-bottom: 40px;
+}
+
+/*Title styles*/
+
+.title {
+  font-size: 48px;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 70px;
+  margin-left: 20px;
+}
+
+.sub-title{
+  font-size: 20px;
+  font-style: italic;
+  font-weight: 500;
+  text-align: center;
+  margin-top: 20px;
+  margin-left: -220px;
+}
+
+/* Form styles */
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+label {
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+input[type="file"] {
+  font-size: 18px;
+  border: 2px solid #ccc;
+  padding: 10px;
+  width: 300px;
+  border-radius: 5px;
+}
+
+.upload {
+  font-size: 18px;
+  color: #FF4136;
+  margin-top: 10px;
+  display: none;
+}
+
+.generate {
+  font-size: 24px;
+  font-weight: 500;
+  color: #FFF;
+  background-color: #0074D9;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  margin-top: 20px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.generate:hover {
+  background-color: #001F3F;
+}
+
+/* Preview styles */
+
+#preview {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#preview img {
+  max-width: 100%;
+  max-height: 400px;
+  margin-right: 20px;
+}
+
+#preview h2 {
+  font-size: 36px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+#preview p {
+  font-size: 24px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+/* Sidebar styles */
+
+.sidebar {
+  background-color: #001F3F;
+  height: 100%;
+  width: 250px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow-x: hidden;
+  padding-top: 20px;
+  color: #FFF;
+}
+
+.sidebar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.sidebar li .logo-image {
+  display: block;
+  margin-left: 20px;
+  margin-bottom: 10px;
+  width: 100px;
+  height: 100px;
+}
+
+.welcome {
+  padding: 10px;
+}
+
+.sidebar li a {
+  display: block;
+  color: #FFF;
+  padding: 20px;
+  text-decoration: none;
+}
+
+.sidebar li a:hover {
+  background-color: #FFF;
+  color: #001F3F;
+}
+
+.sidebar p {
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Content styles */
+
+.content {
+  margin-left: 43%;
+  padding: 100px;
+  min-height: 100vh;
+  background-color: #F7F7F7;
+  transition: margin-left 0.2s ease-in-out;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+#image-file {
+  display: none;
+}
+
+.upload {
+  display: none;
+  color: red;
+}
+
+.generate {
+  padding: 10px 20px;
+  background-color: #333333;
+  color: #f2f2f2;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.generate:hover {
+  background-color: #f2f2f2;
+  color: #333333;
+  transform: scale(1.05);
+}
+
+.result {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.result img {
+  margin-bottom: 10px;
+}
+
+.caption-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.caption-text {
+  font-size: 1rem;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Card styles */
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.card {
+  background-color: #ffffff;
+  border: 1px solid #cccccc;
+  border-radius: 5px;
+  padding: 20px;
+  margin-bottom: 40px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  width: calc(50% - 40px);
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.card h2 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  
+  .content {
+    margin-left: 0;
+  }
+}

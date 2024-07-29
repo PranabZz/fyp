@@ -1,0 +1,59 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Captionify</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">  
+    <link href="https://fonts.googleapis.com/css?family=Georgia" rel="stylesheet">
+  </head> 
+  <body>
+    <div class="container">
+    <div class="sidebar">
+      <ul>
+        <li class="logo-sidebar"><img class="logo-image" src="{% static 'Logo/logo-04.png' %}" alt="Logo"></li>
+        {% if user.is_authenticated %}
+          <li class="welcome">Welcome, {{ user.first_name }}!</li>
+        {% else %}
+          <li class="welcome">Welcome, guest!</li>
+        {% endif %}
+        <li><a href="">Home</a></li>
+        <li><a href="/authentication/register/">Register</a></li>
+        <li><a href="/authentication/login/">Log in</a></li>
+        <li><a href="browse_captions">Browse captions</a></li>
+        {% if user.is_authenticated %}
+          <li><a href="/authentication/logout/">Log out</a></li>
+        {% endif %}
+      </ul>
+    </div>
+    <div class="content">
+      <div class="header">
+        <img class="logo-title" src="{% static 'Logo/logo-04.png' %}" alt="Logo">
+        <h1 class="title">Captionify</h1>
+        <h2 class="sub-title"> Let your pictures speak.</h2>
+      </div>
+      <form id="upload-form" action="#" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div class="form-group">
+            <label for="image-file">Choose an image to upload:</label>
+            <input type="file" id="image-file" name="image-file" accept="image/*" required>
+            <div class="upload">Please choose an image to upload.</div>
+        </div>
+        <button type="submit" class="generate">Generate Caption</button>
+      </form>
+      <div id="preview"></div>
+      {% if caption %}
+        <div class="result">
+          <div class="card">
+            <img src="media/{{ image_path }}" alt="Uploaded Image" height="300px">
+            <div class="caption">
+              <h2 class="caption-title">Generated Caption:</h2>
+              <p class="caption-text">{{ caption }}</p>
+            </div>
+          </div>
+        </div>
+      {% endif %}
+      <script src="{% static 'script.js' %}"></script>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,132 @@
+body {
+  font-family: "Georgia", serif;
+}
+
+h1{
+  text-align: center;
+}
+.sort {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.sort a {
+  margin: 0 10px;
+  color: #333;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.sort a:hover {
+  text-decoration: underline;
+}
+
+/* Sidebar styles */
+
+.sidebar {
+    background-color: #001F3F;
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+    padding-top: 20px;
+    color: #FFF;
+  }
+  
+  .sidebar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .sidebar li .logo-image {
+    display: block;
+    margin-left: 20px;
+    margin-bottom: 10px;
+    width: 100px;
+    height: 100px;
+  }
+  
+  .welcome {
+    padding: 10px;
+  }
+  
+  .sidebar li a {
+    display: block;
+    color: #FFF;
+    padding: 20px;
+    text-decoration: none;
+  }
+  
+  .sidebar li a:hover {
+    background-color: #FFF;
+    color: #001F3F;
+  }
+  
+  .sidebar p {
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+/* Content styles */
+
+.content {
+    margin-left: 250px;
+    padding: 20px;
+    min-height: 100vh;
+    background-color: #F7F7F7;
+    transition: margin-left 0.2s ease-in-out;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card {
+  width: calc(32.33% - 20px);
+  margin: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.card-img {
+  max-width: 100%;
+}
+
+.card-body {
+  padding: 10px;
+}
+
+.card-title {
+  margin-bottom: 10px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.card-text {
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.btn-like {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.btn-like i {
+  margin-right: 5px;
+}
+
+.btn-like:hover {
+  color: #f50057;
+}

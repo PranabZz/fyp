@@ -1,0 +1,119 @@
+body,
+    html {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        background: #f2f2f2 !important;
+    }
+    body {
+        font-family: "Georgia", serif;
+    }
+    /* Sidebar styles */
+
+    .sidebar {
+    background-color: #001F3F;
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+    padding-top: 20px;
+    color: #FFF;
+    }
+
+    .sidebar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    }
+
+    .sidebar li .logo-image {
+    display: block;
+    margin-left: 20px;
+    margin-bottom: 10px;
+    width: 100px;
+    height: 100px;
+    }
+
+    .welcome {
+    padding: 10px;
+    }
+
+    .sidebar li a {
+    display: block;
+    color: #FFF;
+    padding: 20px;
+    text-decoration: none;
+    }
+
+    .sidebar li a:hover {
+    background-color: #FFF;
+    color: #001F3F;
+    }
+
+    .sidebar p {
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 20px;
+    text-align: center;
+    }
+
+    .user_card {
+        width: 350px;
+        margin-top: auto;
+        margin-bottom: auto;
+        margin-left: 25%;
+        background: #74cfbf;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        padding: 10px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        -moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        border-radius: 5px;
+		font-family: "Georgia", serif;
+    }
+
+    .form_container {
+        margin-top: 20px;
+    }
+
+    #form-title{
+        color: #fff;
+        
+    }
+
+    .login_btn {
+        margin-top: 10px;
+        width: 100%;
+        background: #333333 !important;
+        color: white !important;
+    }
+    .login_btn:focus {
+        box-shadow: none !important;
+        outline: 0px !important;
+    }
+    .login_container {
+        padding: 0 2rem;
+    }
+    .input-group-text {
+        background: #333333 !important;
+        color: white !important;
+        border: 0 !important;
+        border-radius: 0.25rem 0 0 0.25rem !important;
+    }
+    .input_user,
+    .input_pass:focus {
+        box-shadow: none !important;
+        outline: 0px !important;
+    }
+
+    #messages{
+        background-color: grey;
+        color: #fff;
+        padding: 10px;
+        margin-top: 10px;
+    }

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Captionify</title>
+    <link rel="stylesheet" href="CSS/style.css">  </head>
+  <body>
+    <div class = "sidebar">
+      <ul>
+        <li><a href="register.html">Register</a></li>
+        <li><a href="login.html">Log in</a></li>
+        <li><a href="#">Browse captions</a></li>
+      </ul>
+    </div>
+    <div class = "content">
+      <h1>Captionify</h1>
+      <form id="upload-form" action="#" method="post" enctype="multipart/form-data">
+          <div class="form-group">
+              <label for="image-file">Choose an image to upload:</label>
+              <input type="file" id="image-file" name="image-file" accept="image/*" required>
+              <div class="upload">Please choose an image to upload.</div>
+          </div>
+          <button type="submit" class="generate">Generate Caption</button>
+      </form>
+      <div id="preview"></div>
+      <div id="caption">
+          <h2>Generated Caption:</h2>
+      </div>
+      <script src="JS/script.js"></script>
+    </div>
+  </body>
+</html>
